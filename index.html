@@ -1,1 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>A Letter For You ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background: #fff5f7;
+            color: #5a3038;
+        }
+
+        /* OPENING */
+
+        .opening {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(
+                135deg,
+                #fff0f3,
+                #ffe1e8
+            );
+        }
+
+        .heart {
+            font-size: 75px;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        .opening h1 {
+            font-size: 42px;
+            margin: 20px 0 12px;
+        }
+
+        .opening p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        button {
+            border: none;
+            background: #d95f76;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        /* LETTER */
+
+        .letter {
+            display: none;
+            min-height: 100vh;
+            padding: 70px 25px;
+            max-width: 750px;
+            margin: auto;
+            line-height: 1.9;
+            font-size: 18px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .letter h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .letter p {
+            margin-bottom: 20px;
+        }
+
+        .signature {
+            text-align: right;
+            margin-top: 40px;
+            font-style: italic;
+        }
+
+        /* MEMORIES */
+
+        .memories {
+            display: none;
+            padding: 60px 25px;
+            text-align: center;
+            background: #fff;
+        }
+
+        .memories h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .memory-text {
+            margin-bottom: 30px;
+        }
+
+        .memory-card {
+            background: #fff5f7;
+            border-radius: 20px;
+            padding: 25px;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .memory-card h3 {
+            margin-bottom: 10px;
+        }
+
+        /* APPRECIATION */
+
+        .appreciation {
+            display: none;
+            padding: 70px 25px;
+            text-align: center;
+            background: #ffe9ee;
+        }
+
+        .appreciation h2 {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .reason {
+            background: white;
+            padding: 22px;
+            margin: 15px auto;
+            max-width: 600px;
+            border-radius: 18px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+        }
+
+        .reason h3 {
+            margin-bottom: 8px;
+        }
+
+        /* FINAL */
+
+        .final {
+            display: none;
+            min-height: 100vh;
+            padding: 80px 25px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: linear-gradient(
+                135deg,
+                #ffe1e8,
+                #fff5f7
+            );
+        }
+
+        .final h2 {
+            font-size: 34px;
+            margin-bottom: 25px;
+        }
+
+        .final p {
+            max-width: 600px;
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        .big-heart {
+            font-size: 80px;
+            margin-bottom: 25px;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        /* ANIMATIONS */
+
+        @keyframes heartbeat {
+
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.15);
+            }
+
+        }
+
+        @keyframes fadeIn {
+
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            .opening h1 {
+                font-size: 32px;
+            }
+
+            .letter h2,
+            .memories h2,
+            .appreciation h2 {
+                font-size: 27px;
+            }
+
+            .letter {
+                font-size: 17px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- OPENING -->
+
+    <section class="opening" id="opening">
+
+        <div class="heart">❤️</div>
+
+        <h1>A Little Something For You</h1>
+
+        <p>
+            There's something I want you to read...
+        </p>
+
+        <button onclick="openLetter()">
+            Open My Letter ♡
+        </button>
+
+    </section>
+
+
+    <!-- LOVE LETTER -->
+
+    <section class="letter" id="letter">
+
+        <h2>For My Dearest Love ❤️</h2>
+
+        <p>
+            My love,
+        </p>
+
+        <p>
+            I don't think I'll ever find enough words to explain
+            how grateful I am that you came into my life.
+            You became one of the most beautiful parts of my story,
+            and every memory we've created together means more to me
+            than you probably realize.
+        </p>
+
+        <p>
+            Thank you for every little thing you've done,
+            for every moment you've shared with me,
+            and for simply being you.
+        </p>
+
+        <p>
+            I appreciate you more than words can ever explain.
+            Even the smallest moments with you became memories
+            that I will always treasure.
+        </p>
+
+        <p>
+            And if I had the chance to go back to the day
+            our paths first crossed, I would still choose
+            to know you all over again.
+        </p>
+
+        <p class="signature">
+            With all my love,<br>
+            Mark ❤️
+        </p>
+
+        <div style="text-align:center; margin-top:50px;">
+
+            <button onclick="showMemories()">
+                Our Little Memories ♡
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- MEMORIES -->
+
+    <section class="memories" id="memories">
+
+        <h2>Our Little Memories 📸</h2>
+
+        <p class="memory-text">
+            Some moments may seem small,
+            but they became some of my favorite memories.
+        </p>
+
+        <div class="memory-card">
+
+            <h3>November 27, 2025 ❤️</h3>
+
+            <p>
+                The day our story began.
+                I never knew that meeting you would eventually
+                become such an important part of my life.
+            </p>
+
+        </div>
+
+
+        <div class="memory-card">
+
+            <h3>Our Photobooth Moment 📸</h3>
+
+            <p>
+                I still appreciate that you gave in and shared
+                that little moment with me. It became one of those
+                memories I'll always be happy to look back on.
+            </p>
+
+        </div>
+
+
+        <div class="memory-card">
+
+            <h3>Every Little Moment ♡</h3>
+
+            <p>
+                From simple conversations to unforgettable days,
+                every moment with you became something special.
+            </p>
+
+        </div>
+
+        <button onclick="showAppreciation()">
+            9 Things I Appreciate About You ♡
+        </button>
+
+    </section>
+
+
+    <!-- APPRECIATION -->
+
+    <section class="appreciation" id="appreciation">
+
+        <h2>9 Things I Appreciate About You ❤️</h2>
+
+
+        <div class="reason">
+
+            <h3>01 — Your Presence</h3>
+
+            <p>
+                I'm grateful simply because you're here.
+            </p>
+
+        </div>
+
+
+        <div class="reason">
+
+            <h3>02 — Your Effort</h3>
+
+            <p>
+                I notice the little things you do,
+                even when you think I don't.
+            </p>
+
+        </div>
+
+
+        <div class="reason">
+
+            <h3>03 — Your Patience</h3>
+
+            <p>
+                Thank you for understanding me
+                and staying patient with me.
+            </p>
+
+        </div>
+
+
+        <div class="reason">
+
+            <h3>04 — Your Kindness</h3>
+
+            <p>
+                Your kindness is one of the things
+                that makes you special to me.
+            </p>
+
+        </div>
+
+
+        <div class="reason">
+
+            <h3>05 — Your Smile</h3>
+
+            <p>
+                Somehow, seeing you happy always makes
+                an ordinary moment feel better.
+            </p>
+
+        </div>
+
+
+        <div class="reason">
+
+            <h3>06 — Your Effort For Us</h3>
+
+            <p>
+                I appreciate every time you chose
+                to make an effort for what we have.
+            </p>
+
+        </div>
+
+
+        <div class="reason">
+
+            <h3>07 — The Memories</h3>
+
+            <p>
+                Thank you for giving me memories
+                that I will always treasure.
+            </p>
+
+        </div>
+
+
+        <div class="reason">
+
+            <h3>08 — The Way You Understand Me</h3>
+
+            <p>
+                Thank you for accepting the different
+                sides of me.
+            </p>
+
+        </div>
+
+
+        <div class="reason">
+
+            <h3>09 — Simply You ❤️</h3>
+
+            <p>
+                At the end of everything,
+                I appreciate you for being you.
+            </p>
+
+        </div>
+
+
+        <button onclick="showFinal()">
+            One Last Thing... ♡
+        </button>
+
+    </section>
+
+
+    <!-- FINAL -->
+
+    <section class="final" id="final">
+
+        <div class="big-heart">
+            ❤️
+        </div>
+
+        <h2>If I Had To Choose Again...</h2>
+
+        <p>
+            If I could go back to the very beginning,
+            knowing everything I know now,
+            I would still choose to meet you.
+
+            <br><br>
+
+            I would still choose every conversation,
+            every laugh, every memory,
+            and every little moment we shared.
+
+            <br><br>
+
+            Thank you for becoming part of my story.
+
+            <br><br>
+
+            And most importantly...
+
+            <br><br>
+
+            <strong>
+                Thank you for being you. ❤️
+            </strong>
+        </p>
+
+    </section>
+
+
+    <script>
+
+        function openLetter() {
+
+            document.getElementById("opening").style.display = "none";
+
+            document.getElementById("letter").style.display = "block";
+
+            window.scrollTo(0, 0);
+
+        }
+
+
+        function showMemories() {
+
+            document.getElementById("memories").style.display = "block";
+
+            document.getElementById("memories").scrollIntoView({
+                behavior: "smooth"
+            });
+
+        }
+
+
+        function showAppreciation() {
+
+            document.getElementById("appreciation").style.display = "block";
+
+            document.getElementById("appreciation").scrollIntoView({
+                behavior: "smooth"
+            });
+
+        }
+
+
+        function showFinal() {
+
+            document.getElementById("final").style.display = "flex";
+
+            document.getElementById("final").scrollIntoView({
+                behavior: "smooth"
+            });
+
+        }
+
+    </script>
+
+</body>
+</html>
