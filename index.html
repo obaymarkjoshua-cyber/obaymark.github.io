@@ -436,7 +436,11 @@
             There's something I want you to read...
         </p>
 
-      </section>
+        <button onclick="openLetter()">
+        Open My Letter ♡
+    </button>
+
+</section>
 
     
 <!-- LOVE LETTER -->
@@ -889,8 +893,10 @@
 
     document.getElementById("letter").style.display = "block";
             
-    window.scrollTo(0, 0);
-
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 }
 
 
