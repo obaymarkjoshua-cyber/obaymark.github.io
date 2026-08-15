@@ -119,10 +119,60 @@
     margin-top: 3px;
 }
 
+/* FLOATING MUSIC PLAYER */
+
+.music-player {
+    position: fixed !important;
+    right: 18px;
+    bottom: 18px;
+    width: 290px;
+    background: #ffffff;
+    border: 1px solid #f3cbd4;
+    border-radius: 18px;
+    padding: 10px;
+    box-shadow: 0 8px 30px rgba(90, 48, 56, 0.25);
+    z-index: 999999 !important;
+}
+
+.music-header {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 2px 5px 8px;
+}
+
+.music-note {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    border-radius: 10px;
+    background: #ffe1e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.music-details {
+    text-align: left;
+    line-height: 1.2;
+}
+
+.music-title {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.music-subtitle {
+    font-size: 10px;
+    color: #a47780;
+    margin-top: 3px;
+}
+
 .music-player iframe {
-    display: block;
-    width: 100%;
-    height: 163px;
+    display: block !important;
+    width: 100% !important;
+    height: 163px !important;
     border: none;
     border-radius: 12px;
 }
@@ -134,13 +184,20 @@
         bottom: 10px;
         width: 235px;
         padding: 8px;
-        border-radius: 15px;
     }
 
     .music-player iframe {
-        height: 132px;
+        height: 132px !important;
     }
 
+    .music-title {
+        font-size: 11px;
+    }
+
+    .music-subtitle {
+        font-size: 9px;
+    }
+}
     .music-title {
         font-size: 11px;
     }
@@ -321,6 +378,17 @@
 </head>
 
 <body>
+    <div style="
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 300px;
+    height: 180px;
+    background: red;
+    z-index: 9999999;
+">
+    TEST PLAYER
+</div>
 
     <!-- OPENING -->
 
@@ -337,7 +405,8 @@
         </p>
 
       </section>
- <!-- FLOATING MUSIC PLAYER -->
+
+    <!-- FLOATING MUSIC PLAYER -->
 
 <div class="music-player" id="musicPlayer">
 
